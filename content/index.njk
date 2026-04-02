@@ -1,0 +1,69 @@
+---
+layout: layouts/base.njk
+title: Sergei Lushchik — Full-Stack Developer
+description: Developer portfolio and blog.
+---
+<section id="about" class="intro section">
+	<p>I became interested in software development in my early teens, starting out as a self-taught programmer before later pursuing formal coursework. By 16, I had already stepped into my first professional role in IT, working full-time during summers and part-time alongside my studies.</p>
+	<p>Today, I work as a full-stack developer, building and maintaining both frontend and backend systems. I'm driven by the challenge of solving complex problems and enjoy continuously adapting to an ever-evolving technology landscape.</p>
+	<p>Outside of work, I'm into photography and stay engaged in political initiatives. Occasionally, I bring those interests together.</p>
+	<p>Feel free to reach out if you'd like to talk tech or connect more broadly.</p>
+</section>
+
+<section id="experience" class="section">
+	<h2>Experience</h2>
+	<div class="experience-list">
+		{% for item in collections.experience %}
+			<article class="experience-item">
+				<h3>{{ item.data.title }}</h3>
+				<p class="meta-row">{{ item.data.company }}
+					{% if item.data.timeframe %} · {{ item.data.timeframe | displayTimeframe }}
+					{% endif %}
+				</p>
+				<p>{{ item.content  | safe }}</p>
+				{% if item.data.technologies and item.data.technologies.length %}
+					<ul class="tag-list tech-tags" aria-label="Technologies">
+						{% for tech in item.data.technologies %}
+							<li>{{ tech }}</li>
+						{% endfor %}
+					</ul>
+				{% endif %}
+			</article>
+		{% endfor %}
+	</div>
+</section>
+
+{# <section id="projects" class="section">
+	<h2>Side Projects</h2>
+	<div class="card-grid">
+		{% for project in collections.sideProjects %}
+			<article class="card">
+				<h3>{{ project.data.title }}</h3>
+				<p>{{ project.data.description }}</p>
+				<div class="card-links">
+					{% if project.data.github %}
+						<a href="{{ project.data.github }}">GitHub</a>
+					{% endif %}
+					{% if project.data.demo %}
+						<a href="{{ project.data.demo }}">Demo</a>
+					{% endif %}
+				</div>
+			</article>
+		{% endfor %}
+	</div>
+</section>
+
+<section id="writing" class="section">
+	<h2>Writing</h2>
+	<ul class="list-plain list-plain-writing">
+		{% for post in collections.blog %}
+			<li>
+				<div>
+					<h3>{{ post.data.title }}</h3>
+					<p>{{ post.data.excerpt or (post.templateContent | excerpt(170)) }}</p>
+				</div>
+				<span class="date">{{ post.data.date | displayDate }}</span>
+			</li>
+		{% endfor %}
+	</ul>
+</section> #}
