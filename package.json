@@ -11,7 +11,8 @@
 		"start-ghpages": "npx @11ty/eleventy --pathprefix=/11ty-test/ --serve --quiet",
 		"debug": "cross-env DEBUG=Eleventy* npx @11ty/eleventy",
 		"debugstart": "cross-env DEBUG=Eleventy* npx @11ty/eleventy --serve --quiet",
-		"benchmark": "cross-env DEBUG=Eleventy:Benchmark* npx @11ty/eleventy"
+		"benchmark": "cross-env DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
+		"optimize:images": "node scripts/optimize-blog-images.js"
 	},
 	"repository": {
 		"type": "git",
@@ -39,6 +40,9 @@
 		"zod-validation-error": "^5.0.0"
 	},
 	"dependencies": {
-		"@zachleat/heading-anchors": "^1.0.5"
+		"@resvg/resvg-js": "^2.6.2",
+		"@zachleat/heading-anchors": "^1.0.5",
+		"satori": "^0.26.0",
+		"sharp": "^0.34.5"
 	}
 }

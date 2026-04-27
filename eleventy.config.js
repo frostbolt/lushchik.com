@@ -1,5 +1,8 @@
+import pluginRss from "@11ty/eleventy-plugin-rss";
+
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default function(eleventyConfig) {
+	eleventyConfig.addPlugin(pluginRss);
 	eleventyConfig.addPassthroughCopy({ "./public/": "/" });
 	eleventyConfig.addWatchTarget("css/**/*.css");
 
@@ -96,8 +99,8 @@ export default function(eleventyConfig) {
 			if (!match) {
 				return "";
 			}
-			const date = new Date(Date.UTC(Number.parseInt(match[1], 10), Number.parseInt(match[2], 10), 1));
-			return new Intl.DateTimeFormat("en", { month: "short", year: "numeric" }).format(date);
+			const date = new Date(Date.UTC(Number.parseInt(match[1], 10), Number.parseInt(match[2], 10) - 1, 1));
+			return new Intl.DateTimeFormat("en", { month: "short", year: "numeric", timeZone: "UTC" }).format(date);
 		};
 
 		const start = format(timeframe.start);

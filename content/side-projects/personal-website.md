@@ -1,11 +1,12 @@
 ---
 title: Personal Website v1
-description: Lightweight status board for release pipelines.
-github: https://github.com/frostbolt/deployment-dashboard
-demo: https://example.com/demo
+description: My previous personal website built with Vue.
+github: https://github.com/frostbolt/lushchik-v1
+demo: https://v1.lushchik.com
 tags:
-  - tooling
-  - devops
-order: 1
+  - web
+  - vue
+order: 2
 ---
-A static-first dashboard that surfaces deploy health and environment drift from a single view.
+
+the first version of my website. 

@@ -1,0 +1,136 @@
+---
+layout: layouts/base.njk
+---
+
+<nav class="post-nav">
+	<a href="/" class="back-link">← Back</a>
+</nav>
+
+<article class="post">
+	<header class="post-header">
+		<h1>{{ title }}</h1>
+		<p class="post-meta">{{ date | displayDate }}</p>
+	</header>
+	<div class="post-content">
+		{{ content | safe }}
+	</div>
+</article>
+
+<style>
+	.post-nav {
+		margin-bottom: 2rem;
+	}
+
+	.back-link {
+		font-size: 0.9rem;
+		color: var(--muted);
+		text-decoration: none;
+		transition: color 0.15s;
+	}
+
+	.back-link:hover {
+		color: var(--text);
+	}
+
+	.post {
+		max-width: 700px;
+	}
+
+	.post-header {
+		margin-bottom: 2rem;
+	}
+
+	.post h1 {
+		font-size: 2rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.post-meta {
+		color: var(--muted);
+		font-size: 0.9rem;
+	}
+
+	.post-content h2 {
+		margin-top: 2.5rem;
+		margin-bottom: 1.25rem;
+		font-size: 1.5rem;
+		font-weight: 700;
+		letter-spacing: -0.02em;
+		padding-bottom: 0.75rem;
+		border-bottom: 2px solid var(--muted);
+		opacity: 0.9;
+	}
+
+	.post-content h3 {
+		margin-top: 1.75rem;
+		margin-bottom: 0.75rem;
+		font-size: 1.25rem;
+		font-weight: 600;
+		letter-spacing: -0.01em;
+	}
+
+	.post-content p {
+		margin-bottom: 1rem;
+	}
+
+	.post-content p:last-of-type {
+		margin-top: 2.5rem;
+	}
+
+	.post-content ul,
+	.post-content ol {
+		margin-left: 1.5rem;
+		margin-bottom: 1.25rem;
+	}
+
+	.post-content ul {
+		list-style: none;
+		padding-left: 0;
+	}
+
+	.post-content ul li {
+		margin-bottom: 0.75rem;
+		line-height: 1.6;
+		padding-left: 1.5rem;
+		position: relative;
+	}
+
+	.post-content ul li::before {
+		content: "☞";
+		position: absolute;
+		left: 0;
+		color: var(--muted);
+	}
+
+	.post-content ol li {
+		margin-bottom: 0.75rem;
+		line-height: 1.6;
+	}
+
+	.post-content code {
+		background: rgba(0, 0, 0, 0.06);
+		color: #d63384;
+		padding: 0.25rem 0.5rem;
+		border-radius: 4px;
+		font-size: 0.9em;
+		font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+		font-weight: 500;
+	}
+
+	html[data-theme="dark"] .post-content code {
+		background: rgba(255, 255, 255, 0.1);
+		color: #ff7fa0;
+	}
+
+	.post-content a {
+		text-decoration: underline;
+	}
+
+	.post-content img {
+		display: block;
+		max-width: 100%;
+		height: auto;
+		margin: 1.75rem auto;
+		border-radius: 6px;
+	}
+</style>

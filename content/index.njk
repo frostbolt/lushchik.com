@@ -33,7 +33,22 @@ description: Developer portfolio and blog.
 	</div>
 </section>
 
-{# <section id="projects" class="section">
+<section id="writing" class="section">
+	<h2>Writing</h2>
+	<ul class="list-plain list-plain-writing">
+		{% for post in collections.blog %}
+			<li>
+				<div>
+					<h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+					<p>{{ post.data.excerpt or (post.templateContent | excerpt(170)) }}</p>
+				</div>
+				<span class="date">{{ post.data.date | displayDate }}</span>
+			</li>
+		{% endfor %}
+	</ul>
+</section>
+
+<section id="projects" class="section">
 	<h2>Side Projects</h2>
 	<div class="card-grid">
 		{% for project in collections.sideProjects %}
@@ -52,18 +67,3 @@ description: Developer portfolio and blog.
 		{% endfor %}
 	</div>
 </section>
-
-<section id="writing" class="section">
-	<h2>Writing</h2>
-	<ul class="list-plain list-plain-writing">
-		{% for post in collections.blog %}
-			<li>
-				<div>
-					<h3>{{ post.data.title }}</h3>
-					<p>{{ post.data.excerpt or (post.templateContent | excerpt(170)) }}</p>
-				</div>
-				<span class="date">{{ post.data.date | displayDate }}</span>
-			</li>
-		{% endfor %}
-	</ul>
-</section> #}

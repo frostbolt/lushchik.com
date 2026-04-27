@@ -353,3 +353,12 @@ p {
     grid-template-columns: 1fr;
   }
 }
+
+.invertable {
+  transition: filter 0.2s ease;
+}
+
+html[data-theme="dark"] .invertable {
+  filter: invert(1);
+  mix-blend-mode: lighten;
+}
