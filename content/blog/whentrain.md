@@ -11,7 +11,7 @@ Early one morning, while waiting to be called in for a routine check, I had some
 
 It sent me screenshots. I drew doodles in Excalidraw, explaining how I imagined the cards. Then I asked it to install ngrok and serve the app over the internet so I could take a peek—and it did. Wow.
 
-<img src="/img/blog/whentrain/doodle.jpeg" width="480" class="invertable" alt="Excalidraw sketch of two train arrival cards — Coney Island and Manhattan — each showing a 2 min countdown and follow-up arrivals in 15, 31, 41 min, under a station name">
+<img src="/img/blog/whentrain/doodle.png" width="480" class="invertable" alt="Excalidraw sketch of two train arrival cards — Coney Island and Manhattan — each showing a 2 min countdown and follow-up arrivals in 15, 31, 41 min, under a station name">
 
 ## The Problem
 

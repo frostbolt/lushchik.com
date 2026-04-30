@@ -57,10 +57,10 @@ description: Developer portfolio and blog.
 				<p>{{ project.data.description }}</p>
 				<div class="card-links">
 					{% if project.data.github %}
-						<a href="{{ project.data.github }}">GitHub</a>
+						<a href="{{ project.data.github }}" target="_blank" rel="noopener">GitHub</a>
 					{% endif %}
 					{% if project.data.demo %}
-						<a href="{{ project.data.demo }}">Demo</a>
+						<a href="{{ project.data.demo }}" target="_blank" rel="noopener">Demo</a>
 					{% endif %}
 				</div>
 			</article>
