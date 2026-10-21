@@ -3,7 +3,7 @@ title: Software Engineer
 company: MindCloud
 timeframe:
   start: 2024-01
-  end:
+  end: 2026-05
 description: Designed and implemented features for an iPaaS
 technologies:
   - TypeScript

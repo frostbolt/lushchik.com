@@ -120,6 +120,10 @@ button:focus-visible {
   text-decoration: none;
 }
 
+.brand-block h1 a {
+  text-decoration: none;
+}
+
 .brand-block .intro {
   margin-top: var(--sp-2);
   font-size: var(--fs-sm);

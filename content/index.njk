@@ -62,6 +62,9 @@ description: Developer portfolio and blog.
 					{% if project.data.demo %}
 						<a href="{{ project.data.demo }}" target="_blank" rel="noopener">Demo</a>
 					{% endif %}
+					{% if project.data.curseforge %}
+						<a href="{{ project.data.curseforge }}" target="_blank" rel="noopener">CurseForge</a>
+					{% endif %}
 				</div>
 			</article>
 		{% endfor %}

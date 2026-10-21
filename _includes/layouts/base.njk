@@ -38,7 +38,7 @@
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Caveat:wght@400;600;700&display=swap" rel="stylesheet">
 		<style>
 			{% include "css/index.css" %}
 		</style>
@@ -97,7 +97,7 @@
 			<aside class="sidebar">
 				<div class="brand-block">
 					<h1>
-						{{ metadata.author.name }}
+						<a href="/">{{ metadata.author.name }}</a>
 					</h1>
 
 					<p class="intro">{{ metadata.author.intro }}</p>
